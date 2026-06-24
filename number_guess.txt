@@ -1,0 +1,28 @@
+PROGRAM number_guess
+
+DESKRIPSI
+    random_number: int;
+    user_input: int;
+    attempt = 3
+
+START
+    random_number = RANDOM.RANDINT();
+    
+    WHILE attempt > 0:
+        DISPLAY "Masukan Input: " -> user_input;
+        READ user_input;
+
+        IF user_input == random_number:
+            print("Congrats")
+        ELIF user_input > random_number:
+            print('angka kebesaran')
+            attempt -= 1
+        ELSE :
+            print('angka Kekecilan')
+            attempt -= 1
+        END IF
+    END WHILE
+
+
+    
+END
